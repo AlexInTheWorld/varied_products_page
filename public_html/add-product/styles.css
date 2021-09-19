@@ -1,0 +1,102 @@
+#interface {
+  margin-bottom: 55px;
+}
+
+#top-heading {
+    padding: 0 8px;
+    background-color: dodgerblue;
+    display: grid;
+    grid-template-columns: auto 50px 50px;
+    grid-template-rows: 2fr 1fr;
+    grid-column-gap: 10px;
+    border-right: 10px solid orange;
+    border-left: 10px solid orange;
+}
+
+button {
+    padding: 5px;
+    background-color: cyan;
+    border-color: blueviolet;
+    border-style: outset;
+}
+
+button:hover {
+    background-color: darkturquoise;
+    cursor: pointer;
+    border-style: inset;
+}
+
+#top-heading > button {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    align-self: flex-start;
+}
+
+#top-heading > form {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    align-self: flex-start;
+}
+
+#new-product {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#product_form {
+    background-color: aliceblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 180px;
+    grid-gap: 10px;
+}
+
+.form-container {
+    margin-top: 12px;
+    background-color: lightcyan;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.prod-description {
+    color: darkgreen;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+label {
+    color: dimgray;
+}
+
+.err {
+    color: darkred;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.input_field {
+    display: flex;
+    justify-content: space-between;
+}
+
+select > option:first-child {
+    text-align: right;
+    background-color: gray;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: #0018a3;
+    background-color: aqua;
+    text-align: center;
+}
