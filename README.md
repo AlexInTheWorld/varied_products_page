@@ -12,8 +12,20 @@ View current products. Select specific products and delete them.
 
 Add a product using a form for this purpose. Submit the data and return automatically to the main page where the newly added product will be displayed.
 
+### Technologies used
+- jQuery/AJAX
+- React
+- PHP
+- MySQL
+- CSS
+- JavaScript
 
-### The expected outcome of the test
+#### See app live: 
+
+To the [App](http://createyourproductole.000webhostapp.com/) page.
+
+______________
+## The expected outcome of the test
 A web-app (accessible by an URL) containing two pages for:
 
 1. Product list page
