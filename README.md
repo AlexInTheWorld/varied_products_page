@@ -42,7 +42,7 @@ These are the listed mandatory technical requirements:
 
 This is the first page of the website, so should be accessible by <your_website>/
 
-![Homepage illustrative example]()
+![Homepage illustrative example](/assets/homepage.png)
 
 Please note, that on product list page product should not be split by product types - they should be sorted by primary key in database.
 
@@ -68,7 +68,7 @@ Please note, that on product list page product should not be split by product ty
 
 This page should open once button "ADD" is pressed, and should be accessible by: **<your_website>/add-product**
 
-![Illustrative example of for adding product page]()
+![Illustrative example of for adding product page](/assets/add-prod.png)
 
 ### The page should display a form with id: #product_form, with the following fields:
 
