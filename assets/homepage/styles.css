@@ -1,0 +1,75 @@
+html {
+    height: 100vh;
+    overflow: scroll;
+}
+
+#top-heading {
+    padding: 0 5px;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: space-between;
+    border-right: 10px solid orange;
+    border-left: 10px solid orange;
+}
+
+#btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    margin: 0 2px;
+    background-color: cyan;
+    border-color: blueviolet;
+    border-style: outset;
+}
+
+button:hover {
+    background-color: darkturquoise;
+    cursor: pointer;
+    border-style: inset;
+}
+
+button:disabled {
+    cursor: progress;
+    background-color: darkturquoise;
+    border-style: inset;
+}
+
+#err-msg {
+    color: red;
+}
+
+#listed-products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.product {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 10px;
+    background-color: #cae3db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.delete-checkbox {
+    align-self: flex-start;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    color: #0018a3;
+    background-color: white;
+    text-align: center;
+}
