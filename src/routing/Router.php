@@ -14,14 +14,8 @@ class Router {
 
   function __call($name, $args) /* Dynamically create an associative array that maps routes to callbacks. It is triggered when invoking inaccessible methods in an object context, in this case: get(), post() */
   {
-    list($route, $method) = $args;
-
-    if(!in_array(strtoupper($name), $this->supportedHttpMethods)) {
-      $this->invalidMethodHandler();
-    }
-      
+    list($route, $method) = $args;      
     $this->accepted_responses[strtolower($name)][$this->formatRoute($route)] = $method;
-
   }
 
   /**
@@ -56,9 +50,14 @@ class Router {
     if (isset($this->accepted_responses[$methodDictionary][$formatedRoute])) {
         $method = $this->accepted_responses[$methodDictionary][$formatedRoute]; // Callback closure, i.e, function to be called when method and route match
         call_user_func_array($method, array($this->request));
+      
+    } elseif (!in_array(strtoupper($this->request->requestMethod), $this->supportedHttpMethods)) {
+        $this->invalidMethodHandler();
+        
     } else {
         $this->defaultRequestHandler();
     }
+    
   }
     
 }
