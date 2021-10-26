@@ -67,9 +67,9 @@ class ProdForm extends React.Component {
           
         $.post('/add-product', $('#product_form').serialize(), function( data ) {
             var response = JSON.parse(data);
-            if (data.error) {
+            if (response.error) {
                 btn_pressed.removeAttribute('disabled');
-                $('#err-msg').text(data.error);
+                $('#err-msg').text(response.error);
             } else {
                 window.location.href = 'http://' + window.location.host;
             }
