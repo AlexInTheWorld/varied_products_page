@@ -60,7 +60,7 @@ class MySQL extends Subtype {
         }
         $execute            = mysqli_query($this->connection, $query);
         if(!$execute) {
-            $e              = 'MySQL query error ' . mysqli_error($this->connection);
+            $e              = 'MySQL query error: ' . mysqli_error($this->connection);
             $this->setError($e);
         }
         return $execute;
@@ -83,7 +83,7 @@ class MySQL extends Subtype {
         $return  = array();
         $execute = $this->Query($query);
         if($execute === false) {
-            $e = 'MySQL query error ' . mysqli_error($this->connection);
+            $e = 'MySQL query error: ' . mysqli_error($this->connection);
             $this->setError($e);
             
             return false;
