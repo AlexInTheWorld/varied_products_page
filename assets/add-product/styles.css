@@ -45,6 +45,10 @@ button:disabled {
     align-self: flex-start;
 }
 
+#err-msg {
+    color: red;
+}
+
 #new-product {
     margin-top: 10vh;
     display: flex;
